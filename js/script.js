@@ -9,6 +9,7 @@ const header = document.querySelector('header')
 const number = document.querySelectorAll('b')
 const media1024Widthmax = window.matchMedia("(max-width: 1024px)")
 const media1024Widthmin = window.matchMedia("(min-width: 1024px)")
+const nav = document.querySelector('nav')
 let headerSliderCurrent = 0
 let burgerBool = false
 let valueInterval = 0
@@ -178,10 +179,25 @@ sliderSpan[3].onmousemove = () => {
     }
 }
 
+// ---------------nav animation------------
+
+window.addEventListener('scroll', () => {
+    let logo = document.documentElement.scrollTop
+    if (logo > 1000) {
+        nav.style.position = 'fixed'
+        nav.style.zIndex = '100'
+    }
+    else if (logo < 1000) {
+        nav.style.position = 'static'
+        nav.style.zIndex = '0'
+    }
+})
+
+
 // -----------------media----------------
-function media () {
-   
-    if(media1024Widthmax.matches){
+function media() {
+
+    if (media1024Widthmax.matches) {
         burgerBool = false
         navMenu.classList.remove('active')
         burgerLiner[0].style.transform = 'rotate(0)'
@@ -190,7 +206,7 @@ function media () {
         burgerLiner[2].style.transform = 'rotate(0)'
         burgerLiner[2].style.position = 'static'
     }
-    else if(media1024Widthmin.matches){
+    else if (media1024Widthmin.matches) {
         navMenu.classList.remove('active')
     }
 }
