@@ -1,4 +1,4 @@
-const sliderHeader = ['../images/banner-01.jpg', '../images/banner-02.jpg', '../images/banner-03.jpg', '../images/banner-04.jpg']
+const sliderHeader = ['./images/banner-01.jpg', './images/banner-02.jpg', './images/banner-03.jpg', './images/banner-04.jpg']
 const burgerLiner = document.getElementsByClassName('burgerLiner')
 const sliderSpan = document.getElementsByClassName('sliderSpan')
 const progress = document.querySelectorAll('progress')
