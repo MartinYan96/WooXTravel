@@ -1,0 +1,42 @@
+@media screen and (max-width: 1024px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .burger {
+    display: flex;
+  }
+  nav .navMenu {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section1 {
+    flex-wrap: wrap;
+  }
+  .section1 .map {
+    width: 100%;
+  }
+  .section1 .travelData .travelMenu {
+    flex-wrap: wrap;
+  }
+  .section1 .travelData .travelMenu img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .section2 {
+    text-align: center;
+  }
+  .section2 .section2blok h2,
+.section2 .section2blok p {
+    padding: 15px 25px;
+    text-align: center;
+  }
+  footer {
+    padding: 50px 25px 80px 25px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  .section1 .travelData .travelMenu img {
+    height: 400px;
+  }
+}/*# sourceMappingURL=media.css.map */

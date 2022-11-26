@@ -1,0 +1,441 @@
+@font-face {
+  font-family: "popins";
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  justify-content: space-around;
+  background: #22b3c1;
+  align-items: center;
+  position: absolute;
+  padding: 0 3% 0 3%;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  z-index: 10;
+}
+nav .navMenu {
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  display: flex;
+}
+nav .navMenu .navMenuDescription > a {
+  font: 15px "popins", sans-serif;
+  color: #fff;
+}
+nav .navMenu .navMenuDescription a:hover {
+  color: #dddddd;
+  transition: 0.3s;
+}
+nav .burger {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  display: none;
+  height: 30px;
+  width: 50px;
+  gap: 8px;
+}
+nav .burger .burgerLiner {
+  background-color: #fff;
+  transition: 0.5s;
+  width: 30px;
+  height: 2px;
+}
+
+header {
+  background: url(../images/banner-01.jpg) no-repeat center/cover;
+  transition: background 0.5s linear;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  padding-bottom: 40px;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: grid;
+  width: 100%;
+}
+header .main-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-top: 100px;
+  margin-top: 10%;
+}
+header .main-caption h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "popins", sans-serif;
+}
+header .main-caption .mainTitle {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: "popins";
+}
+header .main-caption .headerButton {
+  color: #22b3c1;
+  border: 1px solid #22b3c1;
+  padding: 12px 30px;
+  border-radius: 25px;
+  background: transparent;
+  font-weight: 500;
+  font-family: "popins";
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-bottom: 30px;
+  width: 129px;
+  height: 47px;
+}
+header .main-caption .headerButton:hover {
+  background: #22b3c1;
+  color: #fff;
+}
+header .percentParent {
+  background-color: #fff;
+  padding: 30px 50px;
+  border-radius: 61px;
+  width: 80%;
+  display: flex;
+  row-gap: 20px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10.4%;
+}
+header .percentParent .percentItems {
+  flex: 0 0 auto;
+  width: 22%;
+  min-width: 180px;
+  background: #fff;
+  display: flex;
+}
+header .percentParent .percentItems .parcentIcons {
+  min-width: 60px;
+  min-height: 60px;
+  max-height: 60px;
+  border: 1px solid #22b3c1;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: grid;
+  place-items: center;
+}
+header .percentParent .percentItems .parcentIcons .fa-user,
+header .percentParent .percentItems .parcentIcons .fa-globe,
+header .percentParent .percentItems .parcentIcons .fa-home {
+  font-size: 24px;
+  color: #22b3c1;
+}
+header .percentParent .percentItems .parcentText h3 {
+  font-size: 15px;
+  color: #afafaf;
+  font-family: "popins", sans-serif;
+}
+header .percentParent .percentItems .parcentText b {
+  font-size: 20px;
+  color: #22b3c1;
+  font-family: "popins", sans-serif;
+}
+header .percentParent .exploreMore {
+  font-size: 14px;
+  color: #fff;
+  background-color: #22b3c1;
+  border: 1px solid #22b3c1;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  height: 50px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+header .percentParent .exploreMore:hover {
+  background-color: #2dc5d3;
+}
+header .slider {
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10% 0 10%;
+}
+header .slider .sliderFrame {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+header .slider .sliderFrame progress {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 2px;
+  width: 100%;
+}
+header .slider .sliderFrame progress::-webkit-progress-value {
+  background: #22b3c1;
+}
+header .slider .sliderFrame .sliderSpan {
+  font-family: "popins";
+  text-align: center;
+  color: #f6eac5;
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.navMenu.active {
+  border-bottom: 1px solid rgb(221, 221, 221);
+  background-color: #fff;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  color: black;
+  display: flex;
+  height: 257px;
+  width: 70%;
+  transition: 0.3s;
+  top: 50px;
+  left: 14%;
+}
+.navMenu.active .navMenuDescription {
+  border-bottom: 1px solid rgb(233, 233, 233);
+  width: 100%;
+  text-align: center;
+  height: 51px;
+  padding-top: 10px;
+}
+.navMenu.active .navMenuDescription a {
+  color: #050505;
+}
+.navMenu.active .navMenuDescription:hover a {
+  color: #22b3c1;
+  transition: 0.3s;
+}
+
+.section1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  gap: 20px;
+  margin-top: 100px;
+  padding: 0 12% 0 12%;
+}
+.section1 .travelData {
+  width: 774px;
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+}
+.section1 .travelData .travelMenuHeader h2 {
+  font: 700 30px "popoins", sans-serif;
+  color: #2A2A2A;
+  margin-bottom: 15px;
+}
+.section1 .travelData .travelMenuHeader p {
+  font: 15px "popins", sans-serif;
+  color: #afafaf;
+  line-height: 2;
+}
+.section1 .travelData .travelMenu {
+  display: flex;
+}
+.section1 .travelData .travelMenu img {
+  width: 269px;
+  height: 275px;
+  border-radius: 30px;
+}
+.section1 .travelData .travelMenu .data {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.section1 .travelData .travelMenu .data .dataHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 15px;
+  min-width: 290px;
+}
+.section1 .travelData .travelMenu .data .dataHeader h3 {
+  font: 900 18px "popoins", sans-serif;
+  color: #2A2A2A;
+}
+.section1 .travelData .travelMenu .data .dataHeader h3 > p {
+  padding: 0;
+  font: 15px "popins", sans-serif;
+  color: #afafaf;
+  line-height: 2;
+}
+.section1 .travelData .travelMenu .data .dataHeader .buttonLink button {
+  font-size: 14px;
+  color: #fff;
+  background-color: #22b3c1;
+  border: 1px solid #22b3c1;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  height: 50px;
+  cursor: pointer;
+}
+.section1 .travelData .travelMenu .data p {
+  font: 15px "popins", sans-serif;
+  color: #afafaf;
+  line-height: 2;
+}
+.section1 .travelData .travelMenu .data ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 1px solid rgb(235, 235, 235);
+  height: 50px;
+  padding: 0 5px 0 5px;
+}
+.section1 .travelData .travelMenu .data ul li {
+  font: 14px "popins", sans-serif;
+  color: #afafaf;
+}
+.section1 .travelData .travelMenu .data a {
+  font: 700 14px "popins", sans-serif;
+  color: #22b3c1;
+}
+.section1 .travelData .travelMenu .data a:hover i {
+  padding-left: 5px;
+  transition: 0.5s;
+}
+.section1 .travelData .pageNumber {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.section1 .travelData .pageNumber .fa-arrow-left,
+.section1 .travelData .pageNumber .fa-arrow-right {
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+}
+.section1 .travelData .pageNumber .fa-arrow-left:hover {
+  background-color: #22b3c1;
+}
+.section1 .travelData .pageNumber .fa-arrow-right:hover {
+  background-color: #22b3c1;
+}
+.section1 .travelData .pageNumber button {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #22b3c1;
+  color: #22b3c1;
+  font: 500 14px, sans-serif;
+  cursor: pointer;
+}
+.section1 .travelData button:hover {
+  background-color: #22b3c1;
+  color: #fff;
+  transition: 0.3s;
+}
+.section1 .map {
+  width: 24%;
+  min-width: 250px;
+  height: 800px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding-top: 137px;
+}
+.section1 .map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 30px;
+}
+
+.section2 {
+  background: url(../images/cta-bg.jpg) no-repeat 50% 71%/cover;
+  width: 100%;
+  padding: 60px 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.section2 .section2blok {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  flex-direction: column;
+  font: 700 20px "popoins", sans-serif;
+  color: #fff;
+}
+.section2 .section2blok h2 {
+  font: 800 37px "popoins", sans-serif;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.section2 a .BookYoursBut {
+  width: 180px;
+  height: 47px;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+.section2 a:hover .BookYoursBut {
+  background: #fff;
+  color: #22b3c1;
+  transition: 0.3s;
+}
+
+footer {
+  width: 100%;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #22b3c1;
+  font: 15px "popins", sans-serif;
+  color: #dfdfdf;
+}
+footer p {
+  line-height: 2;
+  text-align: center;
+}
+footer p a {
+  font: 900 15px "popins", sans-serif;
+  color: #dfdfdf;
+}/*# sourceMappingURL=style.css.map */
