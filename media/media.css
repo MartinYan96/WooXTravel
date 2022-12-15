@@ -1,33 +1,35 @@
 @media screen and (max-width: 1024px) {
-  nav {
+  .navigation {
     justify-content: space-between;
   }
-  nav .burger {
+  .navigation .burgerMenu {
     display: flex;
   }
-  nav .navMenu {
+  .navigation .navMenu {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  .section1 {
+  .travelMenu {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .travelMenu .map {
+    width: 97%;
+  }
+  .travelMenu .travelCountriesMenu .travelSections {
     flex-wrap: wrap;
   }
-  .section1 .map {
-    width: 100%;
-  }
-  .section1 .travelData .travelMenu {
-    flex-wrap: wrap;
-  }
-  .section1 .travelData .travelMenu img {
+  .travelMenu .travelCountriesMenu .travelSections img {
     width: 100%;
     margin-bottom: 15px;
   }
-  .section2 {
+  .toBook {
     text-align: center;
   }
-  .section2 .section2blok h2,
-.section2 .section2blok p {
+  .toBook .toBookText h2,
+.toBook .toBookText p {
     padding: 15px 25px;
     text-align: center;
   }
@@ -36,17 +38,23 @@
   }
 }
 @media screen and (max-width: 768px) and (min-width: 425px) {
-  .section1 .travelData .travelMenu img {
+  .travelMenu .travelCountriesMenu .travelSections img {
     height: 400px;
   }
 }
 @media screen and (max-width: 375px) and (min-width: 320px) {
-  .section1 .travelData .travelMenu img {
+  .travelMenu {
+    width: 97%;
+  }
+  .travelMenu .travelCountriesMenu .travelSections img {
     height: 200px;
     padding: 0px 20px;
     border-radius: 0px;
   }
-  .section1 .travelData .travelMenu .data {
-    padding: 0px 20px;
+  .travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription {
+    padding: 0px 15px;
+  }
+  .travelMenu .travelCountriesMenu .travelMenuHeader {
+    padding-left: 5%;
   }
 }/*# sourceMappingURL=media.css.map */

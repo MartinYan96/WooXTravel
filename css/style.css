@@ -12,7 +12,7 @@
   padding: 0;
 }
 
-nav {
+.navigation {
   justify-content: space-around;
   background: #22b3c1;
   align-items: center;
@@ -23,21 +23,21 @@ nav {
   width: 100%;
   z-index: 10;
 }
-nav .navMenu {
+.navigation .navMenu {
   align-items: center;
   -moz-column-gap: 50px;
        column-gap: 50px;
   display: flex;
 }
-nav .navMenu .navMenuDescription > a {
+.navigation .navMenu .navMenuSections > a {
   font: 15px "popins", sans-serif;
   color: #fff;
 }
-nav .navMenu .navMenuDescription a:hover {
+.navigation .navMenu .navMenuSections a:hover {
   color: #dddddd;
   transition: 0.3s;
 }
-nav .burger {
+.navigation .burgerMenu {
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -48,7 +48,7 @@ nav .burger {
   width: 50px;
   gap: 8px;
 }
-nav .burger .burgerLiner {
+.navigation .burgerMenu .burgerMenuLiners {
   background-color: #fff;
   transition: 0.5s;
   width: 30px;
@@ -70,7 +70,7 @@ header {
   display: grid;
   width: 100%;
 }
-header .main-caption {
+header .mainCaption {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,21 +79,21 @@ header .main-caption {
   padding-top: 100px;
   margin-top: 10%;
 }
-header .main-caption h2 {
+header .mainCaption h2 {
   color: #fff;
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 500;
   font-family: "popins", sans-serif;
 }
-header .main-caption .mainTitle {
+header .mainCaption .mainTitle {
   font-size: 50px;
   color: #fff;
   font-weight: 700;
   margin-bottom: 25px;
   font-family: "popins";
 }
-header .main-caption .headerButton {
+header .mainCaption .goThereButton {
   color: #22b3c1;
   border: 1px solid #22b3c1;
   padding: 12px 30px;
@@ -109,11 +109,11 @@ header .main-caption .headerButton {
   width: 129px;
   height: 47px;
 }
-header .main-caption .headerButton:hover {
+header .mainCaption .goThereButton:hover {
   background: #22b3c1;
   color: #fff;
 }
-header .percentParent {
+header .dataAboutCountries {
   background-color: #fff;
   padding: 30px 50px;
   border-radius: 61px;
@@ -126,14 +126,18 @@ header .percentParent {
   justify-content: space-between;
   margin-top: 10.4%;
 }
-header .percentParent .percentItems {
+header .dataAboutCountries .population,
+header .dataAboutCountries .territory,
+header .dataAboutCountries .avgPrice {
   flex: 0 0 auto;
   width: 22%;
   min-width: 180px;
   background: #fff;
   display: flex;
 }
-header .percentParent .percentItems .parcentIcons {
+header .dataAboutCountries .population .dataAboutCountriesIcons,
+header .dataAboutCountries .territory .dataAboutCountriesIcons,
+header .dataAboutCountries .avgPrice .dataAboutCountriesIcons {
   min-width: 60px;
   min-height: 60px;
   max-height: 60px;
@@ -143,23 +147,33 @@ header .percentParent .percentItems .parcentIcons {
   display: grid;
   place-items: center;
 }
-header .percentParent .percentItems .parcentIcons .fa-user,
-header .percentParent .percentItems .parcentIcons .fa-globe,
-header .percentParent .percentItems .parcentIcons .fa-home {
+header .dataAboutCountries .population .dataAboutCountriesIcons .fa-user,
+header .dataAboutCountries .population .dataAboutCountriesIcons .fa-globe,
+header .dataAboutCountries .population .dataAboutCountriesIcons .fa-home,
+header .dataAboutCountries .territory .dataAboutCountriesIcons .fa-user,
+header .dataAboutCountries .territory .dataAboutCountriesIcons .fa-globe,
+header .dataAboutCountries .territory .dataAboutCountriesIcons .fa-home,
+header .dataAboutCountries .avgPrice .dataAboutCountriesIcons .fa-user,
+header .dataAboutCountries .avgPrice .dataAboutCountriesIcons .fa-globe,
+header .dataAboutCountries .avgPrice .dataAboutCountriesIcons .fa-home {
   font-size: 24px;
   color: #22b3c1;
 }
-header .percentParent .percentItems .parcentText h3 {
+header .dataAboutCountries .population .dataOfCountries h3,
+header .dataAboutCountries .territory .dataOfCountries h3,
+header .dataAboutCountries .avgPrice .dataOfCountries h3 {
   font-size: 15px;
   color: #afafaf;
   font-family: "popins", sans-serif;
 }
-header .percentParent .percentItems .parcentText b {
+header .dataAboutCountries .population .dataOfCountries b,
+header .dataAboutCountries .territory .dataOfCountries b,
+header .dataAboutCountries .avgPrice .dataOfCountries b {
   font-size: 20px;
   color: #22b3c1;
   font-family: "popins", sans-serif;
 }
-header .percentParent .exploreMore {
+header .dataAboutCountries .exploreMore {
   font-size: 14px;
   color: #fff;
   background-color: #22b3c1;
@@ -173,33 +187,33 @@ header .percentParent .exploreMore {
   margin-top: 5px;
   cursor: pointer;
 }
-header .percentParent .exploreMore:hover {
+header .dataAboutCountries .exploreMore:hover {
   background-color: #2dc5d3;
 }
-header .slider {
+header .headerSlider {
   margin-top: 50px;
   width: 80%;
   display: flex;
   justify-content: space-around;
   padding: 0 10% 0 10%;
 }
-header .slider .sliderFrame {
+header .headerSlider .sliderSection {
   width: 20%;
   display: flex;
   flex-direction: column;
   align-content: center;
 }
-header .slider .sliderFrame progress {
+header .headerSlider .sliderSection .headerSliderProgress {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   height: 2px;
   width: 100%;
 }
-header .slider .sliderFrame progress::-webkit-progress-value {
+header .headerSlider .sliderSection .headerSliderProgress::-webkit-progress-value {
   background: #22b3c1;
 }
-header .slider .sliderFrame .sliderSpan {
+header .headerSlider .sliderSection .headerSliderNumber {
   font-family: "popins";
   text-align: center;
   color: #f6eac5;
@@ -208,7 +222,7 @@ header .slider .sliderFrame .sliderSpan {
   font-size: 20px;
 }
 
-.navMenu.active {
+.navigation .navMenu.active {
   border-bottom: 1px solid rgb(221, 221, 221);
   background-color: #fff;
   justify-content: center;
@@ -223,22 +237,22 @@ header .slider .sliderFrame .sliderSpan {
   top: 50px;
   left: 14%;
 }
-.navMenu.active .navMenuDescription {
+.navigation .navMenu.active .navMenuSections {
   border-bottom: 1px solid rgb(233, 233, 233);
   width: 100%;
   text-align: center;
   height: 51px;
   padding-top: 10px;
 }
-.navMenu.active .navMenuDescription a {
+.navigation .navMenu.active .navMenuSections a {
   color: #050505;
 }
-.navMenu.active .navMenuDescription:hover a {
+.navigation .navMenu.active .navMenuSections:hover a {
   color: #22b3c1;
   transition: 0.3s;
 }
 
-.section1 {
+.travelMenu {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -247,37 +261,40 @@ header .slider .sliderFrame .sliderSpan {
   margin-top: 100px;
   padding: 0 12% 0 12%;
 }
-.section1 .travelData {
+.travelMenu .travelCountriesMenu {
   width: 774px;
   display: flex;
   gap: 60px;
   flex-direction: column;
 }
-.section1 .travelData .travelMenuHeader h2 {
+.travelMenu .travelCountriesMenu .travelMenuHeader {
+  padding: 0;
+}
+.travelMenu .travelCountriesMenu .travelMenuHeader h2 {
   font: 700 30px "popoins", sans-serif;
   color: #2A2A2A;
   margin-bottom: 15px;
 }
-.section1 .travelData .travelMenuHeader p {
+.travelMenu .travelCountriesMenu .travelMenuHeader p {
   font: 15px "popins", sans-serif;
   color: #afafaf;
   line-height: 2;
 }
-.section1 .travelData .travelMenu {
+.travelMenu .travelCountriesMenu .travelSections {
   display: flex;
 }
-.section1 .travelData .travelMenu img {
+.travelMenu .travelCountriesMenu .travelSections img {
   width: 269px;
   height: 275px;
   border-radius: 30px;
 }
-.section1 .travelData .travelMenu .data {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.section1 .travelData .travelMenu .data .dataHeader {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription .travelSectionsTitle {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -285,17 +302,17 @@ header .slider .sliderFrame .sliderSpan {
   gap: 15px;
   min-width: 290px;
 }
-.section1 .travelData .travelMenu .data .dataHeader h3 {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription .travelSectionsTitle h3 {
   font: 900 18px "popoins", sans-serif;
   color: #2A2A2A;
 }
-.section1 .travelData .travelMenu .data .dataHeader h3 > p {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription .travelSectionsTitle h3 > p {
   padding: 0;
   font: 15px "popins", sans-serif;
   color: #afafaf;
   line-height: 2;
 }
-.section1 .travelData .travelMenu .data .dataHeader .buttonLink button {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription .travelSectionsTitle .buttonLink button {
   font-size: 14px;
   color: #fff;
   background-color: #22b3c1;
@@ -308,12 +325,12 @@ header .slider .sliderFrame .sliderSpan {
   height: 50px;
   cursor: pointer;
 }
-.section1 .travelData .travelMenu .data p {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription p {
   font: 15px "popins", sans-serif;
   color: #afafaf;
   line-height: 2;
 }
-.section1 .travelData .travelMenu .data ul {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -323,37 +340,37 @@ header .slider .sliderFrame .sliderSpan {
   height: 50px;
   padding: 0 5px 0 5px;
 }
-.section1 .travelData .travelMenu .data ul li {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription ul li {
   font: 14px "popins", sans-serif;
   color: #afafaf;
 }
-.section1 .travelData .travelMenu .data a {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription a {
   font: 700 14px "popins", sans-serif;
   color: #22b3c1;
 }
-.section1 .travelData .travelMenu .data a:hover i {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription a:hover i {
   padding-left: 5px;
   transition: 0.5s;
 }
-.section1 .travelData .pageNumber {
+.travelMenu .travelCountriesMenu .pageNumber {
   display: flex;
   align-items: center;
   gap: 20px;
   justify-content: center;
 }
-.section1 .travelData .pageNumber .fa-arrow-left,
-.section1 .travelData .pageNumber .fa-arrow-right {
+.travelMenu .travelCountriesMenu .pageNumber .fa-arrow-left,
+.travelMenu .travelCountriesMenu .pageNumber .fa-arrow-right {
   border: none;
   background-color: #fff;
   font-size: 16px;
 }
-.section1 .travelData .pageNumber .fa-arrow-left:hover {
+.travelMenu .travelCountriesMenu .pageNumber .fa-arrow-left:hover {
   background-color: #22b3c1;
 }
-.section1 .travelData .pageNumber .fa-arrow-right:hover {
+.travelMenu .travelCountriesMenu .pageNumber .fa-arrow-right:hover {
   background-color: #22b3c1;
 }
-.section1 .travelData .pageNumber button {
+.travelMenu .travelCountriesMenu .pageNumber button {
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -362,12 +379,12 @@ header .slider .sliderFrame .sliderSpan {
   font: 500 14px, sans-serif;
   cursor: pointer;
 }
-.section1 .travelData button:hover {
+.travelMenu .travelCountriesMenu button:hover {
   background-color: #22b3c1;
   color: #fff;
   transition: 0.3s;
 }
-.section1 .map {
+.travelMenu .map {
   width: 24%;
   min-width: 250px;
   height: 800px;
@@ -376,14 +393,14 @@ header .slider .sliderFrame .sliderSpan {
   justify-content: start;
   padding-top: 137px;
 }
-.section1 .map iframe {
+.travelMenu .map iframe {
   width: 100%;
   height: 100%;
   border: none;
   border-radius: 30px;
 }
 
-.section2 {
+.toBook {
   background: url(../images/cta-bg.jpg) no-repeat 50% 71%/cover;
   width: 100%;
   padding: 60px 0 60px 0;
@@ -393,7 +410,7 @@ header .slider .sliderFrame .sliderSpan {
   flex-wrap: wrap;
   margin-top: 100px;
 }
-.section2 .section2blok {
+.toBook .toBookText {
   display: flex;
   width: auto;
   justify-content: center;
@@ -401,12 +418,12 @@ header .slider .sliderFrame .sliderSpan {
   font: 700 20px "popoins", sans-serif;
   color: #fff;
 }
-.section2 .section2blok h2 {
+.toBook .toBookText h2 {
   font: 800 37px "popoins", sans-serif;
   color: #fff;
   margin-bottom: 20px;
 }
-.section2 a .BookYoursBut {
+.toBook a .BookYoursBut {
   width: 180px;
   height: 47px;
   border-radius: 25px;
@@ -415,7 +432,7 @@ header .slider .sliderFrame .sliderSpan {
   background: transparent;
   cursor: pointer;
 }
-.section2 a:hover .BookYoursBut {
+.toBook a:hover .BookYoursBut {
   background: #fff;
   color: #22b3c1;
   transition: 0.3s;

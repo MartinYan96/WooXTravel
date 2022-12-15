@@ -13,7 +13,7 @@
     padding: 0;
 }
 
-nav {
+.navigation {
     justify-content: space-around;
     background: #22b3c1;
     align-items: center;
@@ -29,14 +29,14 @@ nav {
         column-gap: 50px;
         display: flex;
 
-        .navMenuDescription {
+        .navMenuSections {
             >a {
                 font: 15px "popins", sans-serif;
                 color: #fff;
             }
         }
 
-        .navMenuDescription {
+        .navMenuSections {
             a:hover {
                 color: #dddddd;
                 transition: 0.3s;
@@ -44,7 +44,7 @@ nav {
         }
     }
 
-    .burger {
+    .burgerMenu {
         justify-content: center;
         flex-direction: column;
         align-items: center;
@@ -55,7 +55,7 @@ nav {
         width: 50px;
         gap: 8px;
 
-        .burgerLiner {
+        .burgerMenuLiners {
             background-color: #fff;
             transition: 0.5s;
             width: 30px;
@@ -76,7 +76,7 @@ header {
     display: grid;
     width: 100%;
 
-    .main-caption {
+    .mainCaption {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -101,7 +101,7 @@ header {
             font-family: "popins";
         }
 
-        .headerButton {
+        .goThereButton {
             color: #22b3c1;
             border: 1px solid #22b3c1;
             padding: 12px 30px;
@@ -118,13 +118,13 @@ header {
             height: 47px;
         }
 
-        .headerButton:hover {
+        .goThereButton:hover {
             background: #22b3c1;
             color: #fff;
         }
     }
 
-    .percentParent {
+    .dataAboutCountries {
         background-color: #fff;
         padding: 30px 50px;
         border-radius: 61px;
@@ -136,14 +136,16 @@ header {
         justify-content: space-between;
         margin-top: 10.4%;
 
-        .percentItems {
+        .population,
+        .territory,
+        .avgPrice {
             flex: 0 0 auto;
             width: 22%;
             min-width: 180px;
             background: #fff;
             display: flex;
 
-            .parcentIcons {
+            .dataAboutCountriesIcons {
                 min-width: 60px;
                 min-height: 60px;
                 max-height: 60px;
@@ -161,7 +163,7 @@ header {
                 }
             }
 
-            .parcentText {
+            .dataOfCountries {
                 h3 {
                     font-size: 15px;
                     color: #afafaf;
@@ -196,31 +198,31 @@ header {
         }
     }
 
-    .slider {
+    .headerSlider {
         margin-top: 50px;
         width: 80%;
         display: flex;
         justify-content: space-around;
         padding: 0 10% 0 10%;
 
-        .sliderFrame {
+        .sliderSection {
             width: 20%;
 
             display: flex;
             flex-direction: column;
             align-content: center;
 
-            progress {
+            .headerSliderProgress {
                 appearance: none;
                 height: 2px;
                 width: 100%;
             }
 
-            progress::-webkit-progress-value {
+            .headerSliderProgress::-webkit-progress-value {
                 background: #22b3c1;
             }
 
-            .sliderSpan {
+            .headerSliderNumber {
                 font-family: "popins";
                 text-align: center;
                 color: #f6eac5;
@@ -232,42 +234,46 @@ header {
     }
 }
 
-.navMenu.active {
-    border-bottom: 1px solid rgb(221, 221, 221);
-    background-color: #fff;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    color: black;
-    display: flex;
-    height: 257px;
-    width: 70%;
-    transition: 0.3s;
-    top: 50px;
-    left: 14%;
 
-    .navMenuDescription {
-        border-bottom: 1px solid rgb(233 233 233);
-        width: 100%;
-        text-align: center;
-        height: 51px;
-        padding-top: 10px;
 
-        a {
-            color: #050505;
+.navigation {
+    .navMenu.active {
+        border-bottom: 1px solid rgb(221, 221, 221);
+        background-color: #fff;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        color: black;
+        display: flex;
+        height: 257px;
+        width: 70%;
+        transition: 0.3s;
+        top: 50px;
+        left: 14%;
+
+        .navMenuSections {
+            border-bottom: 1px solid rgb(233 233 233);
+            width: 100%;
+            text-align: center;
+            height: 51px;
+            padding-top: 10px;
+
+            a {
+                color: #050505;
+            }
         }
-    }
 
-    .navMenuDescription:hover {
-        a {
-            color: #22b3c1;
-            transition: 0.3s;
+        .navMenuSections:hover {
+            a {
+                color: #22b3c1;
+                transition: 0.3s;
+            }
         }
     }
 }
 
-.section1 {
+.travelMenu {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -276,13 +282,15 @@ header {
     margin-top: 100px;
     padding: 0 12% 0 12%;
 
-    .travelData {
+    .travelCountriesMenu {
         width: 774px;
         display: flex;
         gap: 60px;
         flex-direction: column;
 
         .travelMenuHeader {
+            padding: 0;
+
             h2 {
                 font: 700 30px 'popoins', sans-serif;
                 color: #2A2A2A;
@@ -296,7 +304,7 @@ header {
             }
         }
 
-        .travelMenu {
+        .travelSections {
             display: flex;
 
             img {
@@ -306,13 +314,13 @@ header {
             }
 
 
-            .data {
+            .travelSectionsdescription {
                 padding-left: 20px;
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
 
-                .dataHeader {
+                .travelSectionsTitle {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
@@ -446,7 +454,7 @@ header {
 
 }
 
-.section2 {
+.toBook {
     background: url(../images/cta-bg.jpg) no-repeat 50% 71%/cover;
     width: 100%;
     padding: 60px 0 60px 0;
@@ -455,8 +463,8 @@ header {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 100px;
-    
-    .section2blok {
+
+    .toBookText {
         display: flex;
         width: auto;
         // height: 100%;
@@ -511,7 +519,7 @@ footer {
         text-align: center;
 
         a {
-            font:900 15px "popins", sans-serif;
+            font: 900 15px "popins", sans-serif;
             color: #dfdfdf;
         }
     }
