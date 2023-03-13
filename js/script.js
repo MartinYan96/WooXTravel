@@ -10,14 +10,17 @@ const indexOfCountries = document.querySelectorAll('.indexOfCountries')
 const media1024Widthmax = window.matchMedia("(max-width: 1024px)")
 const media1024Widthmin = window.matchMedia("(min-width: 1024px)")
 const navigation = document.querySelector('.navigation')
+
 let headerSliderCurrent = 0
 let burgerBool = false
 let headerProgressvalueInterval = 0
+
 function ProgressValueZero() {
     headerSliderProgress.forEach(progress => {
         progress.value = 0
     });
 }
+
 function BurgerStyle() {
     burgerMenuLiners[0].style.transform = 'rotate(0)'
     burgerMenuLiners[0].style.position = 'static'
@@ -45,6 +48,7 @@ burgerMenu.addEventListener('click', () => {
     }
 })
 // --------------------------slider headerSliderProgress interval------------------
+
 let valInt = setInterval(() => {
 
     if (headerProgressvalueInterval >= 105) {
@@ -99,7 +103,7 @@ let valInt = setInterval(() => {
 // --------------------------slider headerSliderProgress interval settings---------------------
 
 headerSliderNumber.forEach((slider, index) => {
-    slider.onmousemove = () => {
+    slider.addEventListener('mousemove', () => {
         if (headerSliderProgress[index].value && slider) {
             slider.style.color = '#fff'
             slider.style.cursor = 'default'
@@ -115,7 +119,8 @@ headerSliderNumber.forEach((slider, index) => {
                 headerSliderCurrent = index
             })
         }
-    }
+    })
+
     slider.addEventListener("mouseleave", () => {
         slider.style.color = '#fff'
     })
@@ -125,18 +130,21 @@ headerSliderNumber.forEach((slider, index) => {
 
 window.addEventListener('scroll', () => {
     let logo = document.documentElement.scrollTop
-    if (logo > 1000) {
+    if (logo >= header.clientHeight) {
         navigation.style.position = 'fixed'
         navigation.style.zIndex = '100'
     }
-    else if (logo < 1000) {
+    else {
         navigation.style.position = 'static'
         navigation.style.zIndex = '0'
     }
+    console.log(logo)
 })
 
 
+
 // -----------------media----------------
+
 function media() {
 
     if (media1024Widthmax.matches) {
