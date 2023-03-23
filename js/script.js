@@ -1,5 +1,5 @@
 
-const sliderHeaderImg = ['./images/banner-01.webp', './images/banner-02.webp', './images/banner-03.webp', './images/banner-04.webp']
+const sliderHeaderImg = ['./images/banner-01.jpg', './images/banner-02.jpg', './images/banner-03.jpg', './images/banner-04.jpg']
 const burgerMenuLiners = document.querySelectorAll('.burgerMenuLiners')
 const headerSliderNumber = document.querySelectorAll('.headerSliderNumber')
 const headerSliderProgress = document.querySelectorAll('.headerSliderProgress')
@@ -61,11 +61,12 @@ let valInt = setInterval(() => {
         }
         headerProgressvalueInterval = 0
     }
- 
+ debugger
     header.style.backgroundImage = `url(${sliderHeaderImg[0]})`
     header.style.backgroundImage = `url(${sliderHeaderImg[1]})`
     header.style.backgroundImage = `url(${sliderHeaderImg[2]})`
     header.style.backgroundImage = `url(${sliderHeaderImg[3]})`
+    header.style.backgroundImage = `url(${sliderHeaderImg[0]})`
     header.style.backgroundImage = `url(${sliderHeaderImg[headerSliderCurrent]})`
     headerSliderProgress[headerSliderCurrent].value = headerProgressvalueInterval
     headerProgressvalueInterval++
