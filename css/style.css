@@ -26,7 +26,7 @@
 .navigation .navMenu {
   align-items: center;
   -moz-column-gap: 50px;
-  column-gap: 50px;
+       column-gap: 50px;
   display: flex;
 }
 .navigation .navMenu .navMenuSections > a {
@@ -56,7 +56,7 @@
 }
 
 header {
-  background: url(../images/banner-01.jpg) no-repeat center/cover;
+  background: url("../images/banner-01.jpg") no-repeat center/cover;
   transition: background 0.5s linear;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -64,8 +64,8 @@ header {
   padding-bottom: 40px;
   align-items: center;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   display: grid;
   width: 100%;
 }
@@ -120,7 +120,7 @@ header .dataAboutCountries {
   display: flex;
   row-gap: 20px;
   -moz-column-gap: 10px;
-  column-gap: 10px;
+       column-gap: 10px;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 10.4%;
@@ -204,15 +204,12 @@ header .headerSlider .sliderSection {
 }
 header .headerSlider .sliderSection .headerSliderProgress {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   height: 2px;
   width: 100%;
 }
-header
-  .headerSlider
-  .sliderSection
-  .headerSliderProgress::-webkit-progress-value {
+header .headerSlider .sliderSection .headerSliderProgress::-webkit-progress-value {
   background: #22b3c1;
 }
 header .headerSlider .sliderSection .headerSliderNumber {
@@ -274,7 +271,7 @@ header .headerSlider .sliderSection .headerSliderNumber {
 }
 .travelMenu .travelCountriesMenu .travelMenuHeader h2 {
   font: 700 30px "popoins", sans-serif;
-  color: #2a2a2a;
+  color: #2A2A2A;
   margin-bottom: 15px;
 }
 .travelMenu .travelCountriesMenu .travelMenuHeader p {
@@ -296,11 +293,7 @@ header .headerSlider .sliderSection .headerSliderNumber {
   flex-direction: column;
   gap: 15px;
 }
-.travelMenu
-  .travelCountriesMenu
-  .travelSections
-  .travelSectionsdescription
-  .travelSectionsTitle {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription .travelSectionsTitle {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -308,34 +301,17 @@ header .headerSlider .sliderSection .headerSliderNumber {
   gap: 15px;
   min-width: 290px;
 }
-.travelMenu
-  .travelCountriesMenu
-  .travelSections
-  .travelSectionsdescription
-  .travelSectionsTitle
-  h3 {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription .travelSectionsTitle h3 {
   font: 900 18px "popoins", sans-serif;
-  color: #2a2a2a;
+  color: #2A2A2A;
 }
-.travelMenu
-  .travelCountriesMenu
-  .travelSections
-  .travelSectionsdescription
-  .travelSectionsTitle
-  h3
-  > p {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription .travelSectionsTitle h3 > p {
   padding: 0;
   font: 15px "popins", sans-serif;
   color: #afafaf;
   line-height: 2;
 }
-.travelMenu
-  .travelCountriesMenu
-  .travelSections
-  .travelSectionsdescription
-  .travelSectionsTitle
-  .buttonLink
-  button {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription .travelSectionsTitle .buttonLink button {
   font-size: 14px;
   color: #fff;
   background-color: #22b3c1;
@@ -363,12 +339,7 @@ header .headerSlider .sliderSection .headerSliderNumber {
   height: 50px;
   padding: 0 5px 0 5px;
 }
-.travelMenu
-  .travelCountriesMenu
-  .travelSections
-  .travelSectionsdescription
-  ul
-  li {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription ul li {
   font: 14px "popins", sans-serif;
   color: #afafaf;
 }
@@ -376,12 +347,7 @@ header .headerSlider .sliderSection .headerSliderNumber {
   font: 700 14px "popins", sans-serif;
   color: #22b3c1;
 }
-.travelMenu
-  .travelCountriesMenu
-  .travelSections
-  .travelSectionsdescription
-  a:hover
-  i {
+.travelMenu .travelCountriesMenu .travelSections .travelSectionsdescription a:hover i {
   padding-left: 5px;
   transition: 0.5s;
 }
@@ -434,7 +400,7 @@ header .headerSlider .sliderSection .headerSliderNumber {
 }
 
 .toBook {
-  background: url(../images/cta-bg.jpg) no-repeat 50% 71% / cover;
+  background: url(../images/cta-bg.jpg) no-repeat 50% 71%/cover;
   width: 100%;
   padding: 60px 0 60px 0;
   display: flex;
@@ -488,4 +454,4 @@ footer p {
 footer p a {
   font: 900 15px "popins", sans-serif;
   color: #dfdfdf;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

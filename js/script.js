@@ -1,5 +1,5 @@
-let sliderHeaderImg = 
-document.addEventListener('DOMContentLoaded', () => sliderHeaderImg = ['./images/banner-01.jpg', './images/banner-02.jpg', './images/banner-03.jpg', './images/banner-04.jpg'] ) 
+
+const sliderHeaderImg = ['./images/banner-01.jpg', './images/banner-02.jpg', './images/banner-03.jpg', './images/banner-04.jpg'] 
 const burgerMenuLiners = document.querySelectorAll('.burgerMenuLiners')
 const headerSliderNumber = document.querySelectorAll('.headerSliderNumber')
 const headerSliderProgress = document.querySelectorAll('.headerSliderProgress')
