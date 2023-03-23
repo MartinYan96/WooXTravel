@@ -49,6 +49,7 @@ burgerMenu.addEventListener('click', () => {
     }
 })
 // --------------------------slider headerSliderProgress interval------------------
+    header.style.backgroundImage = `url(${sliderHeaderImg[0]})`
 
 let valInt = setInterval(() => {
 
