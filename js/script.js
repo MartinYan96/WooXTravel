@@ -64,7 +64,7 @@ let valInt = setInterval(() => {
     sliderHeaderImg.forEach(() => {
         header.style.backgroundImage = `url(${sliderHeaderImg[headerSliderCurrent]})`
     })
-    // header.style.backgroundImage = `url(${sliderHeaderImg[headerSliderCurrent]})`
+
     headerSliderProgress[headerSliderCurrent].value = headerProgressvalueInterval
     headerProgressvalueInterval++
 
