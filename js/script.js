@@ -61,7 +61,7 @@ let valInt = setInterval(() => {
         }
         headerProgressvalueInterval = 0
     }
- debugger
+
     header.style.backgroundImage = `url(${sliderHeaderImg[0]})`
     header.style.backgroundImage = `url(${sliderHeaderImg[1]})`
     header.style.backgroundImage = `url(${sliderHeaderImg[2]})`
