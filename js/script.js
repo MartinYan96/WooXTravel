@@ -53,20 +53,11 @@ header.style.backgroundImage = `url(${sliderHeaderImg[0]})`
 
 let valInt = setInterval(() => {
 
-    if (headerProgressvalueInterval >= 105) {
-        headerSliderCurrent++
-        if (headerSliderCurrent > 3) {
-            ProgressValueZero()
-            headerSliderCurrent = 0
-
-        }
-        headerProgressvalueInterval = 0
-    }
     
     header.style.backgroundImage = `url(${sliderHeaderImg[headerSliderCurrent]})`
     headerSliderProgress[headerSliderCurrent].value = headerProgressvalueInterval
     headerProgressvalueInterval++
-
+    
     if (headerSliderProgress[1].value == 0 && headerProgressvalueInterval >= 105) {
         headerSliderProgress[0].value = 0
     }
@@ -76,7 +67,7 @@ let valInt = setInterval(() => {
     if (headerSliderProgress[3].value == 0 && headerProgressvalueInterval >= 105) {
         headerSliderProgress[2].value = 0
     }
-
+    
     if (headerSliderCurrent === 0) {
         headerName.innerHTML = 'Caribbean'
         indexOfCountries[0].innerHTML = "44.48 M"
@@ -101,8 +92,16 @@ let valInt = setInterval(() => {
         indexOfCountries[1].innerHTML = "513.120 KM2"
         indexOfCountries[2].innerHTML = "$165.450"
     }
+    if (headerProgressvalueInterval >= 105) {
+        headerSliderCurrent++
+        if (headerSliderCurrent > 3) {
+            ProgressValueZero()
+            headerSliderCurrent = 0
+    
+        }
+        headerProgressvalueInterval = 0
+    }
 }, 30);
-
 // --------------------------slider headerSliderProgress interval settings---------------------
 
 headerSliderNumber.forEach((slider, index) => {
@@ -141,7 +140,6 @@ window.addEventListener('scroll', () => {
         navigation.style.position = 'static'
         navigation.style.zIndex = '0'
     }
-    console.log(logo)
 })
 
 
